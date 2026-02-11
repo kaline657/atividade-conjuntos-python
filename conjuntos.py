@@ -1,3 +1,5 @@
+import random
+
 def ler_conjunto_usuario():
     while True:
         try:
@@ -10,3 +12,13 @@ def ler_conjunto_usuario():
                 print("O conjunto deve ter entre 4 e 8 elementos únicos.")
         except ValueError:
             print("Digite apenas números inteiros.")
+
+def gerar_conjunto_aleatorio():
+    tamanho = random.randint(4, 8)
+    conjunto = set()
+
+    while len(conjunto) < tamanho:
+        numero = random.randint(1, 20)
+        conjunto.add(numero)
+
+    return conjunto
